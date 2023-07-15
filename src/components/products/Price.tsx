@@ -3,6 +3,7 @@ import { ReactElement } from 'react';
 interface PriceProps {
   price: number;
   discount: number;
+  isDetail: boolean;
 }
 
 function Price(props: PriceProps): ReactElement {
@@ -15,14 +16,14 @@ function Price(props: PriceProps): ReactElement {
     <div className={'my-[0.5rem]'}>
       {props.discount > 0 ? (
         <>
-          <span className={'flex items-center text-[1.125rem] font-bold text-[#841206] block'}>
+          <span className={`flex items-center ${props.isDetail ? 'text-[1.5rem]' : "text-[1.125rem]"} font-bold text-[#841206] block`}>
             {currencyFormatter.format(props.price - props.discount)}
             <span className={'text-[0.875rem] font-normal text-[#9b9b9b] ml-[0.5rem]'}>
               -{((props.discount / props.price) * 100).toFixed(1)}%
             </span>
           </span>
 
-          <span className={'block text-[0.875rem] font-normal line-through text-[#9b9b9b]'}>
+          <span className={`block ${props.isDetail ? 'text-[1rem]' : "text-[0.875rem]"} font-normal line-through text-[#9b9b9b]`}>
             {currencyFormatter.format(props.price)}
           </span>
         </>

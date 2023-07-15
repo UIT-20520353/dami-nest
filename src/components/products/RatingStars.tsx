@@ -4,6 +4,7 @@ import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 interface RatingStarsProps {
   totalRatings: number;
   ratingAvg: number;
+  hideAvgAndTotal: boolean;
 }
 
 function RatingStars(props: RatingStarsProps): ReactElement {
@@ -23,7 +24,7 @@ function RatingStars(props: RatingStarsProps): ReactElement {
 
   return (
     <div className={'flex flex-row items-center'}>
-      <div className={'text-[1rem] leading-normal'}>
+      <div className={`${props.hideAvgAndTotal ? 'text-[1.5rem]' : 'text-[1rem]'} leading-normal`}>
         {[1, 2, 3, 4, 5].map((item) => {
           if (item > star.totalStarActive) return;
           return <FaStar key={`star-active-${item}`} className={'text-[#fadb14] inline'} />;
@@ -37,15 +38,21 @@ function RatingStars(props: RatingStarsProps): ReactElement {
         })}
       </div>
 
-      {props.totalRatings ? (
+      {!props.hideAvgAndTotal && (
         <>
-          <span className={'text-[1rem] leading-normal ml-[0.5rem] font-medium'}>{props.ratingAvg.toFixed(1)}</span>
-          <span className={'text-[1rem] text-[#bfbfbf] leading-normal cursor-pointer ml-[0.5rem]'}>
-            ({props.totalRatings} đánh giá)
-          </span>
+          {props.totalRatings > 0 ? (
+            <>
+              <span className={'text-[1rem] leading-normal ml-[0.5rem] font-medium'}>{props.ratingAvg.toFixed(1)}</span>
+              <span className={'text-[1rem] text-[#bfbfbf] leading-normal cursor-pointer ml-[0.5rem]'}>
+                ({props.totalRatings} đánh giá)
+              </span>
+            </>
+          ) : (
+            <span className={'text-[1rem] text-[#bfbfbf] leading-normal cursor-pointer ml-[0.5rem]'}>
+              Chưa có đánh giá
+            </span>
+          )}
         </>
-      ) : (
-        <span className={'text-[1rem] text-[#bfbfbf] leading-normal cursor-pointer ml-[0.5rem]'}>Chưa có đánh giá</span>
       )}
     </div>
   );

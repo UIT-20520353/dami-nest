@@ -7,8 +7,6 @@ interface PaginationProps {
   categoryId: string;
 }
 
-const arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
-
 function Pagination(props: PaginationProps): ReactElement {
   const pages = useMemo(() => {
     return Math.ceil(props.totalCount / 6);
@@ -68,37 +66,10 @@ function Pagination(props: PaginationProps): ReactElement {
             </li>
           )}
 
-          {/*{i !== 1 && (*/}
-          {/*  <li>*/}
-          {/*    <Link*/}
-          {/*      to={''}*/}
-          {/*      className='flex items-center justify-center px-4 h-10 leading-tight text-[#841206] bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700'*/}
-          {/*      style={{ pointerEvents: 'none' }}*/}
-          {/*    >*/}
-          {/*      ...*/}
-          {/*    </Link>*/}
-          {/*  </li>*/}
-          {/*)}*/}
-
           {Array(100)
             .fill(null)
             .map((_, index) => {
               if (i > props.currentPage + 4 || i > pages) return;
-
-              // if (i === props.currentPage && i < pages) {
-              //   i++;
-              //   return (
-              //     <li>
-              //       <Link
-              //         to={''}
-              //         className='flex items-center justify-center px-4 h-10 leading-tight text-[#841206] bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700'
-              //         style={{ pointerEvents: 'none' }}
-              //       >
-              //         ...
-              //       </Link>
-              //     </li>
-              //   );
-              // }
 
               if (i === props.currentPage) {
                 i += 1;
@@ -130,22 +101,7 @@ function Pagination(props: PaginationProps): ReactElement {
                   </li>
                 );
               }
-
-              if (i === props.currentPage + 4 && i < pages) {
-              }
             })}
-
-          {/*{i === props.currentPage + 4 && i < pages && (*/}
-          {/*  <li>*/}
-          {/*    <Link*/}
-          {/*      to={''}*/}
-          {/*      className='flex items-center justify-center px-4 h-10 leading-tight text-[#841206] bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700'*/}
-          {/*      style={{ pointerEvents: 'none' }}*/}
-          {/*    >*/}
-          {/*      ...*/}
-          {/*    </Link>*/}
-          {/*  </li>*/}
-          {/*)}*/}
           {props.currentPage === pages ? (
             <li>
               <Link
@@ -201,36 +157,3 @@ function Pagination(props: PaginationProps): ReactElement {
 }
 
 export { Pagination };
-
-// <li>
-//   <Link
-//     to={''}
-//     className='flex items-center justify-center px-4 h-10 leading-tight text-[#841206] bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700'
-//   >
-//     1
-//   </Link>
-// </li>
-// <li>
-//   <Link
-//     to={''}
-//     className='flex items-center justify-center px-4 h-10 leading-tight text-[#841206] bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700'
-//   >
-//     2
-//   </Link>
-// </li>
-// <li>
-//   <Link
-//     to={''}
-//     className='flex items-center justify-center px-4 h-10 text-white border border-gray-300 bg-[#841206] cursor-default'
-//   >
-//     3
-//   </Link>
-// </li>
-// <li>
-//   <Link
-//     to={''}
-//     className='flex items-center justify-center px-4 h-10 leading-tight text-[#841206] bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700'
-//   >
-//     4
-//   </Link>
-// </li>

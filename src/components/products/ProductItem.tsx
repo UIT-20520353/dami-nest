@@ -29,8 +29,8 @@ function ProductItem(props: IProductItem): ReactElement {
         </NavLink>
       </h2>
 
-      <RatingStars totalRatings={props.totalRatings} ratingAvg={props.ratingAvg} />
-      <Price price={props.price} discount={props.discount} />
+      <RatingStars totalRatings={props.totalRatings} ratingAvg={props.ratingAvg} hideAvgAndTotal={false}/>
+      <Price price={props.price} discount={props.discount} isDetail={false} />
 
       <p className={'max-w-full max-h-[72px] mb-0 line-clamp-3'}>{props.description}</p>
     </div>

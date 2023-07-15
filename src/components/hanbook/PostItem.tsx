@@ -12,7 +12,7 @@ function PostItem(): ReactElement {
         <div className={'h-[200px] mb-[1rem] mx-[-1rem] overflow-hidden cursor-pointer'}>
           <div
             className={
-              'bg-cover bg-no-repeat w-full min-h-[200px] duration-300 group-hover:scale-110 bg-[url("src/assets/hanbook/featured-image.jpg")]'
+              'bg-cover bg-no-repeat w-full min-h-[200px] duration-300 group-hover:scale-110 bg-[url("/image/hanbook/featured-image.jpg")]'
             }
           ></div>
         </div>

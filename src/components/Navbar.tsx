@@ -18,8 +18,8 @@ function Navbar(): ReactElement {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              `relative h-14 flex items-center text-[#d4aa5f] font-medium uppercase tracking-[1.6px] text-base duration-300 font-["Yeseva_One"] before:content-["*"] before:absolute before:w-10 before:h-10 before:rounded-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:bg-[#d4aa5f] before:z-[-1] before:duration-300 active:text-[#841206] hover:text-[#841206] hover:before:opacity-10 ${
-                isActive ? 'before:opacity-20' : 'before:opacity-0'
+              `relative h-14 flex items-center font-medium uppercase tracking-[1.6px] text-base duration-300 font-["Yeseva_One"] before:content-["*"] before:absolute before:w-10 before:h-10 before:rounded-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:bg-[#d4aa5f] before:z-[-1] before:duration-300 active:text-[#841206] hover:text-[#841206] hover:before:opacity-10 ${
+                isActive ? 'before:opacity-20 text-[#841206]' : 'before:opacity-0 text-[#d4aa5f]'
               }`
             }
             to={'/about'}
@@ -28,8 +28,8 @@ function Navbar(): ReactElement {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              `relative h-14 flex items-center text-[#d4aa5f] font-medium uppercase tracking-[1.6px] text-base duration-300 font-["Yeseva_One"] before:content-["*"] before:absolute before:w-10 before:h-10 before:rounded-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:bg-[#d4aa5f] before:z-[-1] before:duration-300 active:text-[#841206] hover:text-[#841206] hover:before:opacity-10 ${
-                isActive ? 'before:opacity-20' : 'before:opacity-0'
+              `relative h-14 flex items-center font-medium uppercase tracking-[1.6px] text-base duration-300 font-["Yeseva_One"] before:content-["*"] before:absolute before:w-10 before:h-10 before:rounded-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:bg-[#d4aa5f] before:z-[-1] before:duration-300 active:text-[#841206] hover:text-[#841206] hover:before:opacity-10 ${
+                isActive ? 'before:opacity-20 text-[#841206]' : 'before:opacity-0 text-[#d4aa5f]'
               }`
             }
             to={'/products'}
@@ -38,8 +38,8 @@ function Navbar(): ReactElement {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              `relative h-14 flex items-center text-[#d4aa5f] font-medium uppercase tracking-[1.6px] text-base duration-300 font-["Yeseva_One"] before:content-["*"] before:absolute before:w-10 before:h-10 before:rounded-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:bg-[#d4aa5f] before:z-[-1] before:duration-300 active:text-[#841206] hover:text-[#841206] hover:before:opacity-10 ${
-                isActive ? 'before:opacity-20' : 'before:opacity-0'
+              `relative h-14 flex items-center font-medium uppercase tracking-[1.6px] text-base duration-300 font-["Yeseva_One"] before:content-["*"] before:absolute before:w-10 before:h-10 before:rounded-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:bg-[#d4aa5f] before:z-[-1] before:duration-300 active:text-[#841206] hover:text-[#841206] hover:before:opacity-10 ${
+                isActive ? 'before:opacity-20 text-[#841206]' : 'before:opacity-0 text-[#d4aa5f]'
               }`
             }
             to={'/hanbook'}

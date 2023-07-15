@@ -48,17 +48,17 @@ function PageHeroUnit(props: PageHeroUnitProps): ReactElement {
           <div
             className={`${
               props.type === 'about' ? 'block' : 'hidden'
-            } bg-[url("src/assets/about/hero-unit.jpg")] min-h-calc-100vh w-full bg-cover opacity-1  bg-right bg-no-repeat`}
+            } bg-[url("/image/about/hero-unit.jpg")] min-h-calc-100vh w-full bg-cover opacity-1  bg-right bg-no-repeat`}
           ></div>
           <div
             className={`${
               props.type === 'hanbook' ? 'block' : 'hidden'
-            } bg-[url("src/assets/hanbook/hero-unit.jpg")] min-h-calc-100vh w-full bg-cover opacity-1  bg-right bg-no-repeat`}
+            } bg-[url("/image/hanbook/hero-unit.jpg")] min-h-calc-100vh w-full bg-cover opacity-1  bg-right bg-no-repeat`}
           ></div>
           <div
             className={`${
               props.type === 'products' ? 'block' : 'hidden'
-            } bg-[url("src/assets/products/hero-unit.jpg")] min-h-calc-100vh w-full bg-cover opacity-1  bg-right bg-no-repeat`}
+            } bg-[url("/image/products/hero-unit.jpg")] min-h-calc-100vh w-full bg-cover opacity-1  bg-right bg-no-repeat`}
           ></div>
         </div>
       </div>
